@@ -24,7 +24,7 @@ filename=`echo ${url} | sed -e "s/^.*\///g"`
 
 if [ -n $(command -v curl) ]
 then
-    curl -sSL -O $url
+    curl -sSL -o $filename $url
 elif [ -n $(command -v wget) ]
 then
     wget -q $url
